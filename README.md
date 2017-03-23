@@ -1,4 +1,4 @@
-# MVC-Website-Without-Global.asax.cs
+# MVC Website Without Global.asax.cs
 ASP.NET MVC Website which uses a HTTPModule as it's startup
 
 From this Article,
