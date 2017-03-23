@@ -18,11 +18,17 @@ namespace DemoModules.PreStartup1
             if (!_startWasCalled)
             {
                 _startWasCalled = true;
-                //Example
                 Microsoft.Web.Infrastructure.DynamicModuleHelper.DynamicModuleUtility.RegisterModule(typeof(DemoPreStartup1));
+                System.Diagnostics.Debug.WriteLine("DemoModules.PreStartup1: Load Modules Here - Single call");
                 // Do your startup logic here.
 
-                System.Diagnostics.Debug.WriteLine("DemoModules.PreStartup1: Load Modules Here - Single call");
+                //Configure here as would have been done in Global.asax.cs
+                //This is the earliest in the application life-cycle.
+                //There will still be multiple calls to PreStartup1, but
+                //only once to this code
+                BundleConfig.RegisterBundles(BundleTable.Bundles);
+                AuthConfig.RegisterOpenAuth();
+                RouteConfig.RegisterRoutes(RouteTable.Routes);
             }
         }
     }

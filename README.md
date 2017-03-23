@@ -1,6 +1,8 @@
 # MVC Website Without Global.asax.cs
 ASP.NET MVC Website which uses a HTTPModule as it's startup
 
+For VS 2017 (ignore the database warning dialogue - there isn't one)
+
 From this Article,
 http://erraticdev.blogspot.co.uk/2011/01/how-to-correctly-use-ihttpmodule-to.html
 and various others.

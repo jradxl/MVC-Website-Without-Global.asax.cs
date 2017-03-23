@@ -51,12 +51,13 @@ namespace DemoModules.Startup1
         /// <param name="context">The application context that instantiated and will be running this module.</param>
         public virtual void OnStart(HttpApplication context)
         {
-            // put your application start code here
+            //put your application start code here
 
-            BundleConfig.RegisterBundles(BundleTable.Bundles);
-            AuthConfig.RegisterOpenAuth();
-            RouteConfig.RegisterRoutes(RouteTable.Routes);
-            System.Diagnostics.Debug.WriteLine("DemoModules.Startup1: ALL CONFIGURED ");
+            //Now in PreStartup1
+            //BundleConfig.RegisterBundles(BundleTable.Bundles);
+            //AuthConfig.RegisterOpenAuth();
+            //RouteConfig.RegisterRoutes(RouteTable.Routes);
+            System.Diagnostics.Debug.WriteLine("DemoModules.Startup1: Now configured in PreStartup1 ");
         }
 
         /// <summary>Initializes any data/resources on HTTP module start.</summary>
